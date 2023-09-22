@@ -55,7 +55,20 @@ app.get('/api/clientes', (req, res) => {
       "nombre": "David López",
       "email": "david.lopez@gmail.com",
       "direccion": "234 Avenida Norte, Ciudad E"
+    },
+    {
+      "id": 6,
+      "nombre": "Nicole Arguedas",
+      "email": "juan.perez@gmail.com",
+      "direccion": "123 Calle lateral, La Molina"
+    },
+    {
+      "id": 7,
+      "nombre": "Jaime Farfan",
+      "email": "jfarfan@gmail.com",
+      "direccion": "San isidro, Ciudad A"
     }
+    
   ];
   res.json(clientes);
 });
