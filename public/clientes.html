@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Listado de Clientes</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Direccion</th>
+        </tr>
+      </thead>
+      <tbody id="clientes">
+        <!-- Aquí se insertarán los datos de los clientes -->
+      </tbody>
+    </table>
+    <a href="index.html" class="btn btn-primary">Regresar al inicio</a>
+
+
+    
+    <script>
+      $(document).ready(function() {
+        $.get('/api/clientes', function(data) {
+          data.forEach(function(cliente) {
+            $('#clientes').append(`
+              <tr>
+                <td>${cliente.id}</td>
+                <td>${cliente.nombre}</td>
+                <td>${cliente.email}</td>
+                <td>${cliente.direccion}</td>
+              </tr>
+            `);
+          });
+        });
+      });
+    </script>
+  </div>
+
+</body>
+</html>
