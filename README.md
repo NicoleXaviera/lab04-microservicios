@@ -26,3 +26,4 @@ El archivo principal del servidor es `index.js`, que configura y lanza el servid
 Los archivos HTML para la interfaz de usuario se encuentran en el directorio `public`. Estos son `index.html`, `clientes.html` y `productos.html`. Los archivos `clientes.html` y `productos.html` contienen código JavaScript para recuperar los datos de los clientes y productos del servidor y construir las tablas.
 
 [![verdadero.jpg](https://i.postimg.cc/V61KZNyY/verdadero.jpg)](https://postimg.cc/Ty7jpfYS)
+[![tambien.jpg](https://i.postimg.cc/138WdTfj/tambien.jpg)](https://postimg.cc/21fFb0dQ)
