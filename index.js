@@ -1,0 +1,131 @@
+
+
+const express = require('express');
+const app = express();
+
+const clientes = [
+    {
+        "id": 1,
+        "nombre": "Juan Pérez",
+        "email": "juan.perez@gmail.com",
+        "direccion": "123 Calle Principal, Ciudad A"
+      },
+      {
+        "id": 2,
+        "nombre": "Ana García",
+        "email": "ana.garcia@gmail.com",
+        "direccion": "456 Avenida Central, Ciudad B"
+      },
+      {
+        "id": 3,
+        "nombre": "Carlos Rodríguez",
+        "email": "carlos.rodriguez@gmail.com",
+        "direccion": "789 Calle Secundaria, Ciudad C"
+      },
+      {
+        "id": 4,
+        "nombre": "Laura Martínez",
+        "email": "laura.martinez@gmail.com",
+        "direccion": "101 Calle del Parque, Ciudad D"
+      },
+      {
+        "id": 5,
+        "nombre": "David López",
+        "email": "david.lopez@gmail.com",
+        "direccion": "234 Avenida Norte, Ciudad E"
+      }
+
+];
+
+const productos = [
+    {
+        "id": 1,
+        "nombre": "Laptop HP",
+        "precio": 799.99
+      },
+      {
+        "id": 2,
+        "nombre": "Tablet Samsung Galaxy",
+        "precio": 299.99
+      },
+      {
+        "id": 3,
+        "nombre": "Smartphone iPhone 12",
+        "precio": 999.99
+      },
+      {
+        "id": 4,
+        "nombre": "Auriculares Sony",
+        "precio": 149.99
+      },
+      {
+        "id": 5,
+        "nombre": "Monitor LG 27 pulgadas",
+        "precio": 249.99
+      }
+
+];
+
+app.get('/', (req, res) => { 
+  res.sendFile('./static/index.html',{ 
+      root: __dirname
+  });
+});
+
+
+app.get('/clientes', (req, res) => {
+  res.send(`
+    <h1>Listado de Clientes</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${clientes.map(cliente => `
+          <tr>
+            <td>${cliente.id}</td>
+            <td>${cliente.nombre}</td>
+            <td>${cliente.email}</td>
+          </tr>`).join('')}
+      </tbody>
+    </table>
+  `);
+});
+
+
+
+app.get('/productos', (req, res) => {
+  res.send(`
+    <h1>Listado de Productos</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${productos.map(producto => `
+          <tr>
+            <td>${producto.id}</td>
+            <td>${producto.nombre}</td>
+            <td>$${producto.precio.toFixed(2)}</td>
+          </tr>`).join('')}
+      </tbody>
+    </table>
+  `);
+});
+
+
+
+app.listen(3000, () => {
+  console.log('Servidor web en ejecución en el puerto 3000');
+});
+
+
+

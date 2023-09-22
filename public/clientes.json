@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "nombre": "Juan Pérez",
+      "email": "juan.perez@example.com",
+      "direccion": "123 Calle Principal, Ciudad A"
+    },
+    {
+      "id": 2,
+      "nombre": "Ana García",
+      "email": "ana.garcia@example.com",
+      "direccion": "456 Avenida Central, Ciudad B"
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos Rodríguez",
+      "email": "carlos.rodriguez@example.com",
+      "direccion": "789 Calle Secundaria, Ciudad C"
+    },
+    {
+      "id": 4,
+      "nombre": "Laura Martínez",
+      "email": "laura.martinez@example.com",
+      "direccion": "101 Calle del Parque, Ciudad D"
+    },
+    {
+      "id": 5,
+      "nombre": "David López",
+      "email": "david.lopez@example.com",
+      "direccion": "234 Avenida Norte, Ciudad E"
+    }
+  ]
+  
