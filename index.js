@@ -104,6 +104,6 @@ app.get('/api/productos', (req, res) => {
   res.json(productos);
 });
 
-app.listen(3000, () => {
-  console.log('Servidor web en ejecución en el puerto 3000');
+app.listen(9000, () => {
+  console.log('Servidor web en ejecución en el puerto 9000');
 });
